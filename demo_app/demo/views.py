@@ -1,11 +1,20 @@
 from django.shortcuts import render
 
 # Create your views here.
+import datetime
+
+now = datetime.datetime.now().strftime("%d/%m/%Y"+ "%H:%M:%S")
+
 
 def login(request):
 
     return render(request, 'Home/login.html')
+#Production Department
+def PreformHome(request):
 
-def Home(request):
+    return render(request, 'Preform/home.html', {"now":now})
 
-    return render(request, 'Production/home.html')
+#Planning Department
+def planningHome(request):
+
+    return render(request, 'Planning/home.html')

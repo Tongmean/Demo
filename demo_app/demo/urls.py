@@ -3,7 +3,10 @@ from . import views
 
 urlpatterns = [
     path('',views.login, name="login"),
+    #Production
+    path('Preform/home', views.PreformHome, name="Home"),
 
-    path('home', views.Home, name="Home")
+    #Planning
+    path('Planning/home', views.planningHome, name="Home")
    
 ]
