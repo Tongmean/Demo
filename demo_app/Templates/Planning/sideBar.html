@@ -1,24 +1,54 @@
-<div class="sideBar-tab">
-    <!--Boss-->
-    <li>
-        <i class="fa fa-home" style="font-size: 24px"></i>
-        <a href="" style="text-decoration: none; color: #000">&nbsp;Home</a>
-    </li>
-    <li>
-        <i class="fa fa-bar-chart-o" style="font-size: 24px"></i>
-        <a href="" style="text-decoration: none; color: #000"
-        >&nbsp;Dashboard</a
-        >
-    </li>
-    <li>
-        <i class="fa fa-gear" style="font-size: 24px"></i>
-        <a href="" style="text-decoration: none; color: #000"
-        >&nbsp;User management
-        </a>
-    </li>
-    <hr />
-    <li>
-        <i class="fa fa-sign-out" style="font-size: 24px"></i>
-        <a href="" style="text-decoration: none; color: #000">Log out </a>
-    </li>
-</div>  
+<div class="w3-sidebar w3-animate-left" style="display:none; padding:0%; margin:0%; " id="mySidebar">
+    <div class="col d-flex justify-content-end">
+        <button class="btn btn-danger m-3" onclick="w3_close()">
+            X
+        </button>
+    </div>
+    <div class="">
+        <div >
+        <div class="flex d-flex justify-content-center align-items-center" >
+            <img class="rounded-circle shadow" style="width: 150px; height: 150px;  object-fit:cover"
+                src=""
+            /> 
+        </div> 
+        <h6 class="text-center">
+            <h6 class="text-center">Status: </h6>
+        </h6>
+        <p class="text-center" id="currentTime" >  </p>
+        <script>
+            setInterval(function() {
+            const currentTime = new Date();
+            document.getElementById('currentTime').innerHTML = currentTime;
+            }, 1000);
+        </script>
+        <br>
+        <br>
+            <!-- sideBar -->
+            
+            <div class="sideBar-tab">
+                <!--Boss-->
+                <li>
+                    <i class="fa fa-home" style="font-size: 24px"></i>
+                    <a href="" style="text-decoration: none; color: #000">&nbsp;Home</a>
+                </li>
+                <li>
+                    <i class="fa fa-bar-chart-o" style="font-size: 24px"></i>
+                    <a href="" style="text-decoration: none; color: #000"
+                    >&nbsp;Dashboard</a
+                    >
+                </li>
+                <li>
+                    <i class="fa fa-gear" style="font-size: 24px"></i>
+                    <a href="" style="text-decoration: none; color: #000"
+                    >&nbsp;User management
+                    </a>
+                </li>
+                <hr />
+                <li>
+                    <i class="fa fa-sign-out" style="font-size: 24px"></i>
+                    <a href="" style="text-decoration: none; color: #000">Log out </a>
+                </li>
+            </div>  
+        </div>
+    </div>
+</div>

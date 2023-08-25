@@ -14,6 +14,10 @@ def PreformHome(request):
 
     return render(request, 'Preform/home.html', {"now":now})
 
+def hot_Press(request):
+
+    return render(request, 'Preform/hot-press.html')
+
 #Planning Department
 def planningHome(request):
 

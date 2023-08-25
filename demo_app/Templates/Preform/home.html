@@ -1,36 +1,6 @@
 {% extends "Preform/layOut.html" %}
     {% block content %}
-        <div class="w3-sidebar w3-animate-left" style="display:none; padding:0%; margin:0%; " id="mySidebar">
-            <div class="col d-flex justify-content-end">
-                <button class="btn btn-danger m-3" onclick="w3_close()">
-                    X
-                </button>
-            </div>
-            <div class="">
-                <div >
-                <div class="flex d-flex justify-content-center align-items-center" >
-                    <img class="rounded-circle shadow" style="width: 150px; height: 150px;  object-fit:cover"
-                        src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2023/06/06131404/Untitled-design-2023-06-06T130050.152.jpg"
-                    /> 
-                </div> 
-                <h6 class="text-center">
-                    <h6 class="text-center">Status: </h6>
-                </h6>
-                <p class="text-center" id="currentTime" >  </p>
-                <script>
-                    setInterval(function() {
-                    const currentTime = new Date();
-                    document.getElementById('currentTime').innerHTML = currentTime;
-                    }, 1000);
-                </script>
-                <br>
-                <br>
-                    <!-- sideBar -->
-                    {% include "Preform/sideBar.html"%}
-                </div>
-            </div>
-
-
+        {% include "Preform/sideBar.html"%}
         </div>
         <!--Main Display-->
         <div id="main">
@@ -50,42 +20,39 @@
                                 <h4>Tong !!</h4>
                             </div>
                         </div>
-
                         <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6 ">
-                            
+                            <!-- StartContent -->
                             <div class="container-fluid my-4">
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="card" style="width: 90%;">
                                             <div class="card-body">
-                                              <h5 class="card-title">ยอดวันนี้</h5>
-                                              <p class="card-text">10000</p>
-                                            
+                                              <h5 class="card-title">ยอดัดวันนี้</h5>
+                                              <p class="card-text">10000</p>              
                                             </div>
                                         </div>                      
                                     </div>
                                     <div class="col-4">
                                         <div class="card" style="width: 90%;">
                                             <div class="card-body">
-                                              <h5 class="card-title">ยอดประจำเดือน</h5>
+                                              <h5 class="card-title">ยอดที่เหลื่อ</h5>
                                               <p class="card-text">10000</p>
-                                            
                                             </div>
                                         </div>                      
                                     </div>
                                     <div class="col-4">
                                         <div class="card" style="width: 90%;">
                                             <div class="card-body">
-                                              <h5 class="card-title">ยอดทั้งหมด</h5>
-                                              <p class="card-text">1.000.000.000.000</p>
-                                            
+                                              <h5 class="card-title">ยอดเสร็จ</h5>
+                                              <p class="card-text">10000</p>
                                             </div>
                                         </div>                      
                                     </div>
                                 </div>
                             </div>
-
-
+                            <!-- StartContent -->
+                            <div>
+                            </div>
                         </div>
                     </div>
                 </div>
