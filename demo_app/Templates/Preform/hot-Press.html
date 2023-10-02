@@ -1,6 +1,7 @@
 {% extends "Preform/layOut.html" %}
     {% block content %}
         {% include "Preform/sideBar.html"%}
+        {% load static %}
         </div>
         <!--Main Display-->
         <div id="main">
@@ -11,10 +12,259 @@
                 </div>
             </div>
             <!-- content -->
-            <div class="container-fluid">
-                <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;" class="my-2">
-                    <div class="row my-4">
-                        
+            <div class="container-fluid content">
+                <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;" class="text-center">
+                    <div class="row">
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="alert alert-danger" role="alert">
+                            A simple primary alert—check it out!
+                          </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="row ">
+                    <!-- Pic -->
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;" class="d-flex justify-content-center pt-3">
+                            <div class="container-fluid">
+                                <div class="row ">
+                                    <form class="row d-flex justify-content-center">
+                                        <div class="col-auto">
+                                          <label for="inputPassword2" class="visually-hidden">เกรด</label>
+                                          <input type="text" class="form-control" placeholder="เกรด">
+                                        </div>
+                                        <div class="col-auto">
+                                          <button type="submit" class="btn btn-primary mb-3">ค้นหา</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Image-referance -->
+                                <div class="row m-3">
+                                
+                                    <img src="{% static 'referance-image/Image-sample.jpg' %}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- บันทัก Panal -->
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                            <form>
+                                <div class="container-fluid py-3">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <div class="form-group">
+                                                <label for="">Lot ผลิตอัดอบ</label>
+                                                <input type="text" class="form-control" placeholder="กรอก Lot ผลิตอัดอบ" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <label>เครื่องอบ</label>
+                                            <select class="form-select">
+                                                <option selected>เลือกเคื่องอบ</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row"> 
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="">ด้าน I</label>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="">ด้าน I</label>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="">ด้าน IL</label>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="">ด้าน IO</label>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="">ด้าน IR</label>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-group">
+                                                <label for="">กะอบ</label>
+                                                <input type="number" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="">วันที่อบ</label>
+                                                <input type="datetime-local" class="form-control" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <label>ผู้ปฏิบัติงาน</label>
+                                            <select class="form-select">
+                                                <option selected>ผู้ปฏิบัติงาน</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-success my-4" style="width: 97%;">บันทัก</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="container-fluid py-3">
+                                <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                                    <div class="text-center">
+                                        <h4 class="text-warning">ข้อมูลแผนการผลิต</h4>
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Lot ผลิตอัดอบ</th>
+                                            <th scope="col">กะ</th>
+                                            <th scope="col">เดรื่อง</th>
+                                            <th scope="col">แผน</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="container-fluid py-3">
+                                <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                                    <div class="text-center">
+                                        <h4 class="text-primary">ข้อมูลการผลิต</h4>
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Lot ผลิตอัดอบ</th>
+                                            <th scope="col">ยอดอัด</th>
+                                            <th scope="col">สกัด</th>
+                                            <th scope="col">QCQA</th>
+                                            <th scope="col">เสีย</th>
+                                            <th scope="col">เคมีเหล็ก</th>
+                                            <th scope="col">ยอดส่งฝน</th>
+                                            <th scope="col">ขาด/เกิน</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <th>1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Damage Pannal -->
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">
+                        <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;" class="m-2">
+                            <div class="p-2">
+                                <form>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <h5 class="text-danger">บันทึกของเสีย</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <label for="">Lot ผลิตอัดอบ</label>
+                                                <input type="text" class="form-control" placeholder="กรอก Lot ผลิตอัดอบ">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="">QC I O</label>
+                                                    <input type="number" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="">Q.C./Q.A</label>
+                                                    <input type="number" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="">เสีย</label>
+                                                    <input type="number" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="">เคมี/เหล็ก</label>
+                                                    <input type="number" class="form-control" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label>ปัญหา</label>
+                                            <select class="form-select">
+                                                <option selected>ผู้ปฏิบัติงาน</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row">
+                                            <label>สาเหตุ</label>
+                                            <select class="form-select">
+                                                <option selected>ผู้ปฏิบัติงาน</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row">
+                                            <button type="submit" class="btn btn-success my-4">บันทัก</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

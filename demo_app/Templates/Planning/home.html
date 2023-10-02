@@ -24,7 +24,7 @@
                         <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6 ">
                             <div class="container-fluid my-4">
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                         <div class="card" style="width: 90%;">
                                             <div class="card-body">
                                               <h5 class="card-title">ยอดวันนี้</h5>
@@ -33,7 +33,7 @@
                                             </div>
                                         </div>                      
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                         <div class="card" style="width: 90%;">
                                             <div class="card-body">
                                               <h5 class="card-title">ยอดประจำเดือน</h5>
@@ -42,7 +42,7 @@
                                             </div>
                                         </div>                      
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-md-2 mt-sm-2 ">
                                         <div class="card" style="width: 90%;">
                                             <div class="card-body">
                                               <h5 class="card-title">ยอดทั้งหมด</h5>
@@ -57,6 +57,67 @@
                     </div>
                 </div>
             </div>
+            <!-- Alert -->
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-success text-center w-75" role="alert" >
+                    <h4 class="alert-heading">Well done!, successfully ลงข้อมูลเข้าในระบบ</h4>
+                    <p>Aww yeah, you successfully upload แผนการผลิตเข้าไปในระบบ.</p>
+                    <hr>
+                    <p class="mb-0">Enjoy your Day :).</p>
+                </div>
+               
+                <div class="alert alert-danger text-center w-75" role="alert" >
+                    <h4 class="alert-heading">Unsuccessfully, ลงข้อมูลเข้าในระบบ</h4>
+                    <p>มีข้อผิดพลาดในการลงข้อมูลเข้าระบบ !!!!</p>
+                    <hr>
+                    <p class="mb-0">กรุณาตรวจสอบขอผิดพลาดและลองอีกครั้ง ......</p>
+                </div>
+            </div>
+            <!-- Input form -->
+            <div class="container-fluid" >
+                <div class="row">
+                    <div class="col-xd-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="card" style="width: 90%;">
+                            <div class="card-body">
+                                <div class="text text-center">
+                                    <h5 class="card-title">แผนdiscเบรก</h5>
+                                    <p class="card-text">Note: ต้องลงไฟล์ (.xlsm)</p>
+                                </div>
+                                <div>
+                                    <div class="text-center">
+                                        <label class="form-label text-center">แผนการผลิตdiscเบรก</label>
+                                    </div>
+                                    <input class="form-control form-control-lg" id="formFileLg" type="file">
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary mt-lg-4 mt-md-4 mt-sm-4 text-end">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xd-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="card" style="width: 90%;">
+                            <div class="card-body">
+                                <div class="text text-center">
+                                    <h5 class="card-title">แผนผ้าเบรก</h5>
+                                    <p class="card-text">Note: ต้องลงไฟล์ (.xlsm)</p>
+                                </div>
+                                <div>
+                                    <div class="text-center">
+                                        <label class="form-label text-center">แผนการผลิตผ้าเบรก</label>
+                                    </div>
+                                    <input class="form-control form-control-lg" id="formFileLg" type="file">
+                                    <div class="text-end">
+                                        <button type="submit" class="btn btn-primary mt-lg-4 mt-md-4 mt-sm-4 text-end">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <!-- content -->
         </div>
     {% endblock %}
